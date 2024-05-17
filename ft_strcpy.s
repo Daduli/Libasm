@@ -2,6 +2,9 @@ global ft_strcpy
 
 section .text
 
+;char *ft_strcpy(char *dst, const char *src)
+;Where char *dst = RDI, const char *src = RSI
+
 ft_strcpy:
   xor rcx, rcx          ;Initialize the counter (int i = 0)
   jmp copy              ;Go to copy

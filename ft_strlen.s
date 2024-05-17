@@ -2,6 +2,9 @@ global ft_strlen
 
 section .text
 
+;size_t    ft_strlen(const char *s)
+;Where const char *s = RDI
+
 ft_strlen:
   xor rax, rax            ;Initialize the counter (int i = 0)
   jmp count               ;Go to count
