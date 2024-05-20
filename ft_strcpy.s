@@ -7,7 +7,7 @@ section .text
 
 ft_strcpy:
   xor rcx, rcx          ;Initialize the counter (int i = 0)
-  jmp copy              ;Go to copy
+  jmp copy              
 
 copy:
   mov  rax, [rsi + rcx] ;Save the current character to copy (tmp[i] = src[i])
@@ -18,8 +18,8 @@ copy:
 
 increment:
   inc ecx              ;Increment the counter by one (i++)
-  jmp copy             ;Go to copy
+  jmp copy             
 
 exit:
   mov rax, rdi         ;Copy dst into our return value
-  ret                  ;Return the function
+  ret                  
