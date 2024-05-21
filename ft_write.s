@@ -2,10 +2,11 @@ global ft_write
 
 extern __errno_location
 
-section .text
-
 ;ssize_t write(int fd, const void *buf, size_t count)
 ;Where int fd = RDI, const void *buf = RSI, size_t count = RDX
+
+section .text
+
 
 ft_write:
   mov rax, 1    ;Set the value of RAX to write

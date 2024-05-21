@@ -10,14 +10,14 @@ ft_strcpy:
   jmp copy              
 
 copy:
-  mov  rax, [rsi + rcx] ;Save the current character to copy (tmp[i] = src[i])
-  mov  [rdi + rcx], rax ;Copy the character into the current position (dst[i] = tmp[i])
-  cmp rax, 0            ;Check if the current character is '\0' 
+  mov  al, [rsi + rcx] ;Save the current character to copy (tmp[i] = src[i])
+  mov  [rdi + rcx], al ;Copy the character into the current position (dst[i] = tmp[i])
+  cmp al, 0            ;Check if the current character is '\0' 
   jnz increment         ;If different, go to increment (tmp[i] != '\0')
   jz exit               ;Else go to exit
 
 increment:
-  inc ecx              ;Increment the counter by one (i++)
+  inc rcx              ;Increment the counter by one (i++)
   jmp copy             
 
 exit:
