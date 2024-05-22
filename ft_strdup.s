@@ -11,11 +11,11 @@ section .text
 
 ft_strdup:
   call ft_strlen wrt ..plt
-  add rax, 1
-  push rdi
+  inc rax 
+  push rdi ;Push RDI onto the stack to save it
   mov rdi, rax
   call malloc wrt ..plt
-  pop rbx
+  pop rbx ;Pop the content on top of the stack into RBX
   mov rdi, rax
   mov rsi, rbx
   call ft_strcpy wrt ..plt
