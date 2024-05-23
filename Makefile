@@ -18,14 +18,14 @@ $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
 test: $(NAME)
-	$(CC) $(CFLAGS) test.c $(NAME)
-	./a.out
+	$(CC) $(CFLAGS) tester.c $(NAME) -o tester
+	./tester
 
 clean:
 	rm -f *o
 
 fclean: clean
-	rm -f $(NAME) a.out
+	rm -f $(NAME) tester
 	
 re: fclean all
 

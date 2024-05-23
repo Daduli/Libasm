@@ -11,8 +11,8 @@ section .text
 
 ft_strdup:
   call ft_strlen wrt ..plt
-  inc rax 
-  push rdi ;Push RDI onto the stack to save it
+  inc rax
+  push rdi ;Push RDI onto the stack to save its content
   mov rdi, rax
   call malloc wrt ..plt
   pop rbx ;Pop the content on top of the stack into RBX
